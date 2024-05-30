@@ -1,65 +1,55 @@
-<img
-  src="https://173-static-files.s3.eu-west-2.amazonaws.com/sayn_docs/logos/sayn_logo.png"
-  alt="SAYN logo"
-  style="width: 50%; height: 50%;"
-/>
-
-#
-
-SAYN is a modern data processing and modelling framework. Users define tasks (incl. Python, automated SQL transformations and more) and their relationships, SAYN takes care of the rest. It is designed for simplicity, flexibility and centralisation in order to bring significant efficiency gains to the data engineering workflow.
-
-## Use Cases
-
-SAYN can be used for multiple purposes across the data engineering and analytics workflows:
-
-* Data extraction: complement tools such as Fivetran or Stitch with customised extraction processes.
-* Data modelling: transform raw data in your data warehouse (e.g. aggregate activity or sessions, calculate marketing campaign ROI, etc.).
-* Data science: integrate and execute data science models.
-
-## Key Features
-
-SAYN has the following key features:
-
-* YAML based DAG (Direct Acyclic Graph) creation. This means all analysts, including non Python proficient ones, can easily add tasks to ETL processes with SAYN.
-* [Automated SQL transformations](https://173tech.github.io/sayn/tasks/autosql/): write your SELECT statement. SAYN turns it into a table/view and manages everything for you.
-* [Jinja parameters](https://173tech.github.io/sayn/parameters/): switch easily between development and product environment and other tricks with Jinja templating.
-* [Python tasks](https://173tech.github.io/sayn/tasks/python/): use Python scripts to complement your extraction and loading layer and build data science models.
-* Multiple [databases](https://173tech.github.io/sayn/databases/overview/) supported.
-* and much more... See the [Documentation](https://173tech.github.io/sayn/).
-
-## Design Principles
-
-SAYN aims to empower data engineers and analysts through its  three core design principles:
-
-* **Simplicity**: data processes should be easy to create, scale and maintain. So your team can focus on data transformation instead of writing processes. SAYN orchestrates all your tasks systematically and provides a lot of automation features.
-* **Flexibility**: the power of data is unlimited and so should your tooling. SAYN supports both SQL and Python so your analysts can choose the most optimal solution for each process.
-* **Centralisation**: all analytics code should live in one place, making your life easier and allowing dependencies throughout the whole analytics process.
-
-## Quick Start
-
-SAYN supports Python 3.7 to 3.10.
-
-```bash
-$ pip install sayn
-$ sayn init test_sayn
-$ cd test_sayn
-$ sayn run
-```
-
-This is it! You completed your first SAYN run on the example project. Continue with the [Tutorial: Part 1](https://173tech.github.io/sayn/tutorials/tutorial_part1/) which will give you a good overview of SAYN's true power!
-
-## Release Updates
-
-If you want to receive update emails about SAYN releases, you can sign up [here](http://eepurl.com/hnfJIr).
-
-## Support
-
-If you need any help with SAYN, or simply want to know more, please contact the team at <sayn@173tech.com>.
-
-## License
-
-SAYN is open source under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
-
----
-
-Made with :heart: by [173tech](https://www.173tech.com).
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ecfb135ad53bd35899eb80a866175fedffec247c438c568874f2680955f8a9c7/68747470733a2f2f3137332d7374617469632d66696c65732e73332e65752d776573742d322e616d617a6f6e6177732e636f6d2f7361796e5f646f63732f6c6f676f732f7361796e5f6c6f676f2e706e67"><img src="https://camo.githubusercontent.com/ecfb135ad53bd35899eb80a866175fedffec247c438c568874f2680955f8a9c7/68747470733a2f2f3137332d7374617469632d66696c65732e73332e65752d776573742d322e616d617a6f6e6177732e636f6d2f7361796e5f646f63732f6c6f676f732f7361796e5f6c6f676f2e706e67" alt="SAYN 徽标" style="width: 50%; height: 50%; max-width: 100%;" data-canonical-src="https://173-static-files.s3.eu-west-2.amazonaws.com/sayn_docs/logos/sayn_logo.png"></a></p>
+<h1 dir="auto"></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAYN 是一个现代数据处理和建模框架。用户定义任务（包括 Python、自动 SQL 转换等）及其关系，SAYN 负责其余部分。它旨在实现简单、灵活和集中化，从而显著提高数据工程工作流程的效率。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用例</font></font></h2><a id="user-content-use-cases" class="anchor" aria-label="永久链接：用例" href="#use-cases"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAYN 可用于数据工程和分析工作流程中的多种用途：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据提取：通过定制的提取流程补充 Fivetran 或 Stitch 等工具。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据建模：转换数据仓库中的原始数据（例如聚合活动或会话、计算营销活动投资回报率等）。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据科学：集成并执行数据科学模型。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">主要特征</font></font></h2><a id="user-content-key-features" class="anchor" aria-label="固定链接：主要特点" href="#key-features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAYN 具有以下主要特点：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于 YAML 的 DAG（有向无环图）创建。这意味着所有分析师（包括不精通 Python 的分析师）都可以轻松地使用 SAYN 将任务添加到 ETL 流程中。</font></font></li>
+<li><a href="https://173tech.github.io/sayn/tasks/autosql/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自动 SQL 转换</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：编写您的 SELECT 语句。SAYN 将其转换为表/视图并为您管理一切。</font></font></li>
+<li><a href="https://173tech.github.io/sayn/parameters/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jinja 参数</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：使用 Jinja 模板轻松在开发和产品环境之间切换以及其他技巧。</font></font></li>
+<li><a href="https://173tech.github.io/sayn/tasks/python/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python 任务</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：使用 Python 脚本来补充您的提取和加载层并构建数据科学模型。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font><font style="vertical-align: inherit;">多种</font></font><a href="https://173tech.github.io/sayn/databases/overview/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据库。</font></font></a><font style="vertical-align: inherit;"></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还有更多……请参阅</font></font><a href="https://173tech.github.io/sayn/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设计原则</font></font></h2><a id="user-content-design-principles" class="anchor" aria-label="固定链接：设计原则" href="#design-principles"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAYN 旨在通过其三个核心设计原则为数据工程师和分析师提供支持：</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">简单性</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：数据流程应该易于创建、扩展和维护。这样您的团队就可以专注于数据转换，而不是编写流程。SAYN 系统地协调您的所有任务并提供许多自动化功能。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">灵活性</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：数据的力量是无限的，您的工具也应如此。SAYN 支持 SQL 和 Python，因此您的分析师可以为每个流程选择最优解决方案。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集中化</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：所有分析代码都应该集中在一个地方，让您的生活更轻松，并允许在整个分析过程中相互依赖。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快速开始</font></font></h2><a id="user-content-quick-start" class="anchor" aria-label="永久链接：快速入门" href="#quick-start"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAYN 支持 Python 3.7 到 3.10。</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>pip install sayn
+sayn init test_sayn
+<span class="pl-c1">cd</span> test_sayn
+sayn run</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="pip install sayn
+sayn init test_sayn
+cd test_sayn
+sayn run" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">就是这样！您已在示例项目上完成了第一次 SAYN 运行。继续学习教程</font></font><a href="https://173tech.github.io/sayn/tutorials/tutorial_part1/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：第 1 部分</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，它将让您全面了解 SAYN 的真正威力！</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布更新</font></font></h2><a id="user-content-release-updates" class="anchor" aria-label="固定链接：发布更新" href="#release-updates"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="http://eepurl.com/hnfJIr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想收到有关 SAYN 发布的更新电子邮件，您可以在此处</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注册</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font></h2><a id="user-content-support" class="anchor" aria-label="固定链接：支持" href="#support"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="mailto:sayn@173tech.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您需要有关 SAYN 的任何帮助，或者只是想了解更多信息，请联系sayn@173tech.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">团队</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://www.apache.org/licenses/LICENSE-2.0" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SAYN 在Apache 2.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可下开源</font><font style="vertical-align: inherit;">。</font></font></p>
+<hr>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://www.173tech.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">由173tech</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用❤️制作</font><font style="vertical-align: inherit;">。</font></font></p>
+</article></div>
